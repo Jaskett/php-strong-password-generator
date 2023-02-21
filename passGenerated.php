@@ -13,12 +13,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generated</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <span>
-        La password generata è: <?php echo $password ?>;
-    </span>
+    <div class="container">
+        <span class="pass-generator">
+            La password generata è: <?php echo $password ?>;
+        </span>
 
-    <a href="index.php">Genera nuova password</a>
+        <a href="index.php">Genera una nuova password</a>
+    </div>
 </body>
 </html>
