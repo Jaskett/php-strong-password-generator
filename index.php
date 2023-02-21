@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     require_once __DIR__ . "/partials/functions.php";
 ?>
 
@@ -17,8 +19,11 @@
         <input type="submit" value="Genera">
     </form>
 
-    <span>
-        La password generata è: <?php echo generateRanPass($length) ?>
-    </span>
+    <?php
+        if($length) {
+            $_SESSION['pass'] = generateRanPass($length);
+            header('Location: passGenerated.php');
+        }
+    ?>
 </body>
 </html>
